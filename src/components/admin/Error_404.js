@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-import "../../layouts/frontend/Style/Frontend.css"
+// import "../../layouts/frontend/Style/Frontend.css"
 const Error_404 = () => {
     return (
         <>

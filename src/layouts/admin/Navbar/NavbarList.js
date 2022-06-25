@@ -5,6 +5,7 @@ import Avatar from "../../../images/avatars/avatar-1.png"
 const NavbarList = () => {
     const Rediract = useNavigate()
     const Logout = () => {
+        // localStorage.clear()
         Rediract('/login')
     }
 

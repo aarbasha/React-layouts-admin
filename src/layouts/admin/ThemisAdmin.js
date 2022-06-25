@@ -4,7 +4,10 @@ const ThemisAdmin = () => {
 
     //pick elemant with add class
     let myHtml = document.querySelector('#page')
-    // let defaultThimes = localStorage.setItem("mode", "light") 
+
+
+    // console.log(localStorage.length)
+
 
     const ChngedModeColor = () => {
         myHtml.classList.remove("dark-theme");
@@ -27,12 +30,12 @@ const ThemisAdmin = () => {
         localStorage.setItem("mode", "light")
     }
     const SaveMode = () => {
-        if (!localStorage.getItem("mode") || !localStorage.setItem("mode", "Color")) {
+        if (!localStorage.setItem("mode", "Color")) {
             myHtml.classList.add('semi-dark');
-            localStorage.setItem("mode", "Color")
+            localStorage.setItem("mode", "Color");
             document.querySelector('#SemiDarkTheme').checked = true;
         }
-        else if ((localStorage.getItem("mode") === 'dark')) {
+        else if (localStorage.getItem("mode") === 'dark') {
             myHtml.classList.add('dark-theme');
             document.querySelector('#DarkTheme').checked = true;
         }
@@ -44,7 +47,8 @@ const ThemisAdmin = () => {
     }
 
     useEffect(() => {
-        SaveMode()
+        SaveMode();
+
     })
 
 
