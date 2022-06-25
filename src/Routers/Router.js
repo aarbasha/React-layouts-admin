@@ -13,6 +13,7 @@ import About from '../components/frontend/About'
 
 import Dashborde from "../components/admin/Dashborde"
 import Index2 from "../components/admin/Index2"
+import Error_404 from "../components/admin/Error_404"
 const Router = () => {
 
     const RouterAdmin = () => {
@@ -64,6 +65,10 @@ const Router = () => {
             element: <MasterUsers />,
             children: RouterUser()
         },
+        {
+            path: "*",
+            element: <Error_404 />
+        }
     ])
 
     return Router

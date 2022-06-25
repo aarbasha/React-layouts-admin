@@ -7,12 +7,13 @@ const NavbarUser = () => {
     return (
         <>
             <header>
-                <nav className="navbar navbar-user navbar-expand-lg fixed-top navbar-light bg-white rounded-0 border-bottom">
+                <nav className="navbar navbar-user navbar-expand-lg fixed-top  rounded-0 border-bottom">
                     <div className="container">
                         <a className="navbar-brand" href="#">
                             <img src={Logo} width={140} />
                         </a>
                         <button
+                        id='toogle'
                             className="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
@@ -75,85 +76,61 @@ const NavbarUser = () => {
                                 </li>
                             </ul>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle dropdown-toggle-nocaret"
-                                        href="#"
-                                        data-bs-toggle="dropdown"
-                                    >
-                                        English
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Something else here
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle dropdown-toggle-nocaret"
-                                        href="#"
-                                        data-bs-toggle="dropdown"
-                                    >
-                                        Username
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <Link to="/admin/index" className="dropdown-item btn-info">
-                                                Admin Dashboard
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Another action
-                                            </a>
-                                        </li>
 
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Something else here
-                                            </a>
-                                        </li>
+                                <div className=' d-flex justify-content-center'>
 
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Something else here
-                                            </a>
-                                        </li>
+                                    <li className="nav-item dropdown">
+                                        <a
+                                            className="nav-link dropdown-toggle dropdown-toggle-nocaret  btn-primary btn-sm px-4 radius-30 text-white"
+                                            href="#"
+                                            data-bs-toggle="dropdown"
+                                        >
+                                            Username
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <Link to="/admin/index" className="dropdown-item btn-info">
+                                                    Admin Dashboard
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="#">
+                                                    Another action
+                                                </a>
+                                            </li>
 
-                                        <li>
-                                            <a className="dropdown-item btn-danger" href="#">
-                                                Logout
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                            <li>
+                                                <a className="dropdown-item" href="#">
+                                                    Something else here
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a className="dropdown-item" href="#">
+                                                    Something else here
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a className="dropdown-item btn-danger" href="#">
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </div>
+
                             </ul>
-                            <div className="d-flex ms-3 gap-3">
+                            <div className="d-flex justify-content-center ms-3 gap-3">
                                 <NavLink
                                     to="/login"
-                                    className="btn xxx  btn-sm px-4 radius-30"
+                                    className="btn xxx nav-link  btn-sm px-4 radius-30"
                                 >
                                     Login
                                 </NavLink>
                                 <NavLink
                                     to="/singup"
-                                    className="btn xxx  btn-sm px-4 radius-30"
+                                    className="btn xxx nav-link  btn-sm px-4 radius-30"
                                 >
                                     Register
                                 </NavLink>

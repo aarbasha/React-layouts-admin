@@ -1,6 +1,53 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const ThemisAdmin = () => {
+
+    //pick elemant with add class
+    let myHtml = document.querySelector('#page')
+    // let defaultThimes = localStorage.setItem("mode", "light") 
+
+    const ChngedModeColor = () => {
+        myHtml.classList.remove("dark-theme");
+        myHtml.classList.remove('light-theme');
+        myHtml.classList.add('semi-dark');
+        localStorage.setItem("mode", "Color")
+    }
+
+    const ChngedModeDark = () => {
+        myHtml.classList.remove('light-theme');
+        myHtml.classList.remove('semi-dark');
+        myHtml.classList.add('dark-theme');
+        localStorage.setItem("mode", "dark")
+    }
+
+    const ChngedModeLight = () => {
+        myHtml.classList.remove('dark-theme');
+        myHtml.classList.remove('semi-dark');
+        myHtml.classList.add('light-theme');
+        localStorage.setItem("mode", "light")
+    }
+    const SaveMode = () => {
+        if (!localStorage.getItem("mode") || !localStorage.setItem("mode", "Color")) {
+            myHtml.classList.add('semi-dark');
+            localStorage.setItem("mode", "Color")
+            document.querySelector('#SemiDarkTheme').checked = true;
+        }
+        else if ((localStorage.getItem("mode") === 'dark')) {
+            myHtml.classList.add('dark-theme');
+            document.querySelector('#DarkTheme').checked = true;
+        }
+        else if (localStorage.getItem("mode") === 'light') {
+            myHtml.classList.add('light-theme');
+            document.querySelector('#LightTheme').checked = true;
+
+        }
+    }
+
+    useEffect(() => {
+        SaveMode()
+    })
+
+
     return (
         <>
             <div className="switcher-body">
@@ -18,15 +65,15 @@ const ThemisAdmin = () => {
                         <h6 className="mb-0">Theme Variation</h6>
                         <hr />
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="LightTheme" defaultValue="option1" />
+                            <input className="form-check-input" onClick={ChngedModeLight} type="radio" name="inlineRadioOptions" id="LightTheme" defaultValue="option1" />
                             <label className="form-check-label" htmlFor="LightTheme">Light</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="DarkTheme" defaultValue="option2" />
+                            <input className="form-check-input" onClick={ChngedModeDark} type="radio" name="inlineRadioOptions" id="DarkTheme" defaultValue="option2" />
                             <label className="form-check-label" htmlFor="DarkTheme">Dark</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="SemiDarkTheme" defaultValue="option3" />
+                            <input className="form-check-input" type="radio" onClick={ChngedModeColor} name="inlineRadioOptions" id="SemiDarkTheme" defaultValue="option3" />
                             <label className="form-check-label" htmlFor="SemiDarkTheme">Semi Dark</label>
                         </div>
                         <hr />

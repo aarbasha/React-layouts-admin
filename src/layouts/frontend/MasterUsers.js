@@ -1,8 +1,10 @@
 import React from 'react'
 import { Outlet } from "react-router-dom";
-import FooterUser from "./FooterUser"
+// import FooterUser from "./FooterUser"
 import NavbarUser from './NavbarUser';
 import "./Style/Frontend.css"
+
+import ThemisAdmin from '../admin/ThemisAdmin';
 const MasterUsers = () => {
   return (
     <>
@@ -13,7 +15,9 @@ const MasterUsers = () => {
           <Outlet />
         </main>
         {/*end page main*/}
-        <FooterUser />
+
+        <ThemisAdmin />
+        {/* <FooterUser /> */}
       </div>
 
     </>

@@ -1,6 +1,18 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 const SidebarContent = () => {
+
+    let AllLinks = document.links
+
+    console.log(AllLinks)
+
+    AllLinks.onclick = function () {
+       
+        window.scroll(0, 100)
+
+        
+    }
+
     return (
         <>
             <div className="tab-content">

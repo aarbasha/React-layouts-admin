@@ -1,20 +1,20 @@
 import React from 'react'
-import{motion} from "framer-motion"
+import { motion } from "framer-motion"
 const Login = () => {
-  return (
-    <motion.div
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
-    exit={{ opacity: 0, scale: 0.8 }}
-  >
+    return (
+        <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+            exit={{ opacity: 0, scale: 0.8 }}
+        >
 
 
-<div className="container">
+            <div className="container">
                 <div className="mt-4">
                     <div className="card rounded-0 overflow-hidden shadow-none border mb-5 mb-lg-0">
                         <div className="row g-0">
                             <div className="col-12 order-1 col-xl-8 d-flex align-items-center justify-content-center border-end">
-                                <img src="assets/images/error/auth-img-7.png" className="img-fluid" alt />
+                                {/* <img src="assets/images/error/auth-img-7.png" className="img-fluid" alt /> */}
                             </div>
                             <div className="col-12 col-xl-4 order-xl-2">
                                 <div className="card-body p-4 p-sm-5">
@@ -72,10 +72,10 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-  </motion.div>
-          
-   
-  )
+        </motion.div>
+
+
+    )
 }
 
 export default Login
