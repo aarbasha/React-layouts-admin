@@ -1,9 +1,9 @@
 import React from "react"
-import Router from "./Routers/Router";
+import RouterIndex from "./Routers/RouterIndex";
 const App = () => {
   return (
     <div className="App">
-      <Router />
+      <RouterIndex />
     </div>
   );
 }

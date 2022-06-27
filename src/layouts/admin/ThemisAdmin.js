@@ -3,54 +3,46 @@ import React, { useEffect } from 'react'
 const ThemisAdmin = () => {
 
     //pick elemant with add class
+
+    // console.log(localStorage.getItem("mode"));
+
     let myHtml = document.querySelector('#page')
-
-
-    // console.log(localStorage.length)
-
-
     const ChngedModeColor = () => {
-        myHtml.classList.remove("dark-theme");
-        myHtml.classList.remove('light-theme');
-        myHtml.classList.add('semi-dark');
+        myHtml.removeAttribute('class');
+        myHtml.setAttribute('class', 'semi-dark')
         localStorage.setItem("mode", "Color")
+        document.querySelector('#SemiDarkTheme').checked = true;
     }
 
     const ChngedModeDark = () => {
-        myHtml.classList.remove('light-theme');
-        myHtml.classList.remove('semi-dark');
+        myHtml.removeAttribute('class');
         myHtml.classList.add('dark-theme');
         localStorage.setItem("mode", "dark")
+        document.querySelector('#DarkTheme').checked = true;
     }
 
     const ChngedModeLight = () => {
-        myHtml.classList.remove('dark-theme');
-        myHtml.classList.remove('semi-dark');
+        myHtml.removeAttribute('class');
         myHtml.classList.add('light-theme');
         localStorage.setItem("mode", "light")
+        document.querySelector('#LightTheme').checked = true;
     }
     const SaveMode = () => {
-        if (!localStorage.setItem("mode", "Color")) {
-            myHtml.classList.add('semi-dark');
-            localStorage.setItem("mode", "Color");
-            document.querySelector('#SemiDarkTheme').checked = true;
+
+        if (localStorage.getItem("mode") === "Color") {
+            ChngedModeColor()
         }
         else if (localStorage.getItem("mode") === 'dark') {
-            myHtml.classList.add('dark-theme');
-            document.querySelector('#DarkTheme').checked = true;
+            ChngedModeDark()
         }
         else if (localStorage.getItem("mode") === 'light') {
-            myHtml.classList.add('light-theme');
-            document.querySelector('#LightTheme').checked = true;
-
+            ChngedModeLight()
         }
     }
 
     useEffect(() => {
         SaveMode();
-
     })
-
 
     return (
         <>

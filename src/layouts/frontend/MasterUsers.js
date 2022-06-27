@@ -11,7 +11,7 @@ const MasterUsers = () => {
       <div className="wrapper">
         <NavbarUser />
         {/*start content*/}
-        <main className="authentication-content">
+        <main className="authentication-content mt-5">
           <Outlet />
         </main>
         {/*end page main*/}

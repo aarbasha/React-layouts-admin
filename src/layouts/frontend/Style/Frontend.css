@@ -1,9 +1,8 @@
 .authentication-content {
   position: relative;
-  top: 100px;
+  top: 50px;
 }
 
-.navbar .navbar-toggler-icon{
-
+.navbar .navbar-toggler-icon {
   background-color: rgb(31, 18, 74);
 }

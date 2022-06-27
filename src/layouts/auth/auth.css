@@ -1,0 +1,27 @@
+
+
+.btn-outline-primary:focus .active:focus {
+    color: none;
+    background-color: none;
+    border-color: none;
+    border: none;
+    outline: none;
+}
+
+.navbar-user{
+    background-color: rgba(0, 0, 0, 0.923);
+
+}
+
+.navbar-user .nav-item .nav-link{
+    color: wheat !important;
+}
+
+.navbar-user .nav-item .nav-link:hover{
+    color: rgb(255, 30, 0) !important;
+}
+
+
+.nav-item .active{
+    border-bottom: 1px solid red;
+}
