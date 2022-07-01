@@ -49,7 +49,7 @@ const SidebarTabs = () => {
                         <i className="bi bi-cloud-arrow-down-fill" />
                     </button>
                 </li>
-                
+
                 <li className="nav-item" data-bs-toggle="tooltip" data-bs-placement="right">
                     <button className="nav-link" data-bs-toggle="pill" data-bs-target="#pills-charts" type="button">
                         <i className="bi bi-pie-chart-fill" />
@@ -65,7 +65,9 @@ const SidebarTabs = () => {
                         <i className="bi bi-award-fill" />
                     </button>
                 </li>
+
                 
+
             </ul>
         </>
     )

@@ -3,6 +3,7 @@ import Logo from "../../images/brand-logo-2.png";
 import { NavLink, Link, useNavigate } from "react-router-dom"
 import "../auth/auth.css"
 import { FiShoppingCart } from "react-icons/fi"
+import {BsSuitHeart} from "react-icons/bs"
 
 const NavbarUser = () => {
 
@@ -66,9 +67,29 @@ const NavbarUser = () => {
                                                 Another action
                                             </a>
                                         </li>
+
                                         <li>
-                                            <hr className="dropdown-divider" />
+                                            <a className="dropdown-item" href="#">
+                                                Something else here
+                                            </a>
                                         </li>
+                                        <li>
+                                            <a className="dropdown-item" href="#">
+                                                Another action
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a className="dropdown-item" href="#">
+                                                Something else here
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item" href="#">
+                                                Another action
+                                            </a>
+                                        </li>
+
                                         <li>
                                             <a className="dropdown-item" href="#">
                                                 Something else here
@@ -77,7 +98,7 @@ const NavbarUser = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="javascript:;">
+                                    <a className="nav-link" href="#">
                                         Contact Us
                                     </a>
                                 </li>
@@ -94,7 +115,7 @@ const NavbarUser = () => {
                                             <div className=' d-flex justify-content-center'>
 
 
-                                                <li className="nav-item dropdown">
+                                                <li className="nav-item dropdown mx-4">
                                                     <a
                                                         className="nav-link dropdown-toggle dropdown-toggle-nocaret"
                                                         href="#"
@@ -134,15 +155,23 @@ const NavbarUser = () => {
                                                     </ul>
                                                 </li>
 
-                                                <li className='nav-item mx-3'>
+                                                <ul className='navbar-nav d-flex justify-content-center'>
+                                                    <li className='nav-item mx-2 '>
+                                                        <Link to="/user/card" className="btn  btn-outline-primary position-relative me-lg-3 rounded-circle">
+                                                            <FiShoppingCart  />
+                                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">123 <span className="visually-hidden">unread messages</span></span>
+                                                        </Link>
+                                                    </li>
 
-                                                    <Link to="/user/card" className="btn px-4 btn-outline-primary position-relative me-lg-5">
-                                                        <FiShoppingCart />
-                                                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1 <span className="visually-hidden">unread messages</span></span>
-                                                    </Link>
+                                                    <li className='nav-item mx-2 '>
+                                                        <Link to="/user/card" className="btn  btn-outline-danger position-relative me-lg-3 rounded-circle">
+                                                            <BsSuitHeart />
+                                                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">500 <span className="visually-hidden">unread messages</span></span>
+                                                        </Link>
+                                                    </li>
+                                                </ul>
 
 
-                                                </li>
 
 
 

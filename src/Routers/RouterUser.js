@@ -4,7 +4,7 @@ import Home from '../components/frontend/Home'
 import About from '../components/frontend/About'
 // import Card from "../components/frontend/Card"
 import MasterUsers from "../layouts/frontend/MasterUsers"
-import {RouteAuthUser} from "./RouteAuthUser"
+import { RouteAuthUser } from "./RouteAuthUser"
 
 export const RouterUser = () => {
     return (
