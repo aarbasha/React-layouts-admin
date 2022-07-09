@@ -157,17 +157,17 @@ const NavbarUser = () => {
 
                                                 <ul className='navbar-nav d-flex justify-content-center'>
                                                     <li className='nav-item mx-2 '>
-                                                        <Link to="/user/card" className="btn  btn-outline-primary position-relative me-lg-3 rounded-circle">
+                                                        <NavLink to="/user/card" className="btn  btn-outline-primary position-relative me-lg-3 rounded-circle">
                                                             <FiShoppingCart  />
                                                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">123 <span className="visually-hidden">unread messages</span></span>
-                                                        </Link>
+                                                        </NavLink>
                                                     </li>
 
                                                     <li className='nav-item mx-2 '>
-                                                        <Link to="/user/card" className="btn  btn-outline-danger position-relative me-lg-3 rounded-circle">
+                                                        <NavLink to="/user/favorite" className="btn  btn-outline-danger position-relative me-lg-3 rounded-circle">
                                                             <BsSuitHeart />
                                                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">500 <span className="visually-hidden">unread messages</span></span>
-                                                        </Link>
+                                                        </NavLink>
                                                     </li>
                                                 </ul>
 

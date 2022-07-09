@@ -29,7 +29,10 @@ const ThemisAdmin = () => {
     }
     const SaveMode = () => {
 
-        if (localStorage.getItem("mode") === "Color") {
+        if (localStorage.getItem("mode") === null) {
+            ChngedModeDark()
+        }
+        else if (localStorage.getItem("mode") === "Color") {
             ChngedModeColor()
         }
         else if (localStorage.getItem("mode") === 'dark') {
@@ -39,6 +42,8 @@ const ThemisAdmin = () => {
             ChngedModeLight()
         }
     }
+
+    // console.log(localStorage.getItem("mode"))
 
     useEffect(() => {
         SaveMode();

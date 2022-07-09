@@ -45,7 +45,8 @@
   transition: all 0.5s;
 }
 
-.nav-item .active {
-  border-bottom: 1px solid red;
+.navbar-nav .nav-item .active {
+  border-bottom: 1px solid rgb(119, 0, 0);
+  box-shadow: 2px 4px 50px rgb(0, 229, 255);
   transition: all 0.5s;
 }
